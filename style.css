@@ -66,6 +66,7 @@ body {
 }
 
 /***************************************/
+
 /*Principale*/
 .console {
   margin-top: 0.5rem;
@@ -81,6 +82,29 @@ body {
 }
 
 /*? ***************** Frederico Section*************************  */
+
+/************* Modal *************/
+
+.modal{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(175, 101, 78, 0.90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.modal-hidden{
+  opacity:0;
+  visibility: hidden;
+}
+
+
 /*******************************************/
 /************* Start Button *************/
 
