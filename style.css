@@ -85,13 +85,13 @@ body {
 
 /************* Modal *************/
 
-.modal{
+.modal {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(175, 101, 78, 0.90);
+  background-color: rgba(16, 5, 107, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,11 +99,45 @@ body {
   z-index: 100;
 }
 
-.modal-hidden{
-  opacity:0;
+.modal-hidden {
+  opacity: 0;
   visibility: hidden;
 }
 
+/* .modal-start-button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  padding: 3rem;
+  border-radius: 100%;
+  cursor:pointer;
+  transition: all 1s ease-out;
+} */
+
+.modal-start-button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 0.2em gray;
+  cursor: pointer;
+}
+/* .modal-start-button:hover {
+  background-color: #ccc;
+  transform: scale(1.1);
+} */
+
+.modal-start-button:active {
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
+}
 
 /*******************************************/
 /************* Start Button *************/
@@ -421,7 +455,6 @@ input:checked + .slider:before {
     border-bottom: solid #c4c4c4 0.2px;
   }
 
-
   .console {
     margin-top: 5rem;
     margin-left: 15%;
@@ -517,50 +550,50 @@ input:checked + .slider:before {
     padding: 0;
   }
 
-.screen .timer-bar {
-  height: 5px;
-  width: 85%;
-  margin-left: 1rem;
-  margin-right: 1.5rem;
-
-}
-
-.timer-bar .progress {
-  height: 5px;
-}
-
-@keyframes progres {
-  100% {
-    width: 0%;
-  }
-  75% {
-    width: 21%;
-  }
-  50% {
-    width: 42%;
-  }
-  25% {
-    width: 63%;
-  }
-  0% {
+  .screen .timer-bar {
+    height: 5px;
     width: 85%;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
   }
-}
-.screen{
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 0;
-}
 
-.screen .screen-score{
-  font-size: medium;
-  position: relative;
-  top: 0;
-  right: 2%;
-}
+  .timer-bar .progress {
+    height: 5px;
+  }
 
-.screen .container-timer{
-  display: flex;
-  justify-content: space-around;
-  margin: 1%;
+  @keyframes progres {
+    100% {
+      width: 0%;
+    }
+    75% {
+      width: 21%;
+    }
+    50% {
+      width: 42%;
+    }
+    25% {
+      width: 63%;
+    }
+    0% {
+      width: 85%;
+    }
+  }
+  .screen {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .screen .screen-score {
+    font-size: medium;
+    position: relative;
+    top: 0;
+    right: 2%;
+  }
+
+  .screen .container-timer {
+    display: flex;
+    justify-content: space-around;
+    margin: 1%;
+  }
 }
