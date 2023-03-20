@@ -85,13 +85,13 @@ body {
 
 /************* Modal *************/
 
-.modal{
+.modal {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(175, 101, 78, 0.90);
+  background-color: rgba(16, 5, 107, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,15 +99,49 @@ body {
   z-index: 100;
 }
 
-.modal-hidden{
-  opacity:0;
+.modal-hidden {
+  opacity: 0;
   visibility: hidden;
 }
 
+/* .modal-start-button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  padding: 3rem;
+  border-radius: 100%;
+  cursor:pointer;
+  transition: all 1s ease-out;
+} */
+
+.modal-start-button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 0.2em gray;
+  cursor: pointer;
+}
+/* .modal-start-button:hover {
+  background-color: #ccc;
+  transform: scale(1.1);
+} */
+
+.modal-start-button:active {
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
+}
 
 /*******************************************/
 /************* Start Button *************/
-
+/* 
 .start-button-container {
   font-family: "Roboto", sans-serif;
   font: 700;
@@ -129,26 +163,26 @@ body {
   font-size: 1rem;
   color: #918080;
   margin-left: 0.5rem;
-}
+} */
 
 /* The switch - the box around the slider */
-.switch {
+/* .switch {
   position: relative;
   display: inline-block;
   width: 2.2rem;
   height: 1rem;
   margin-left: 0.8rem;
-}
+} */
 
 /* Hide default HTML checkbox */
-.switch input {
+/* .switch input {
   opacity: 0;
   width: 0;
   height: 0;
-}
+} */
 
 /* The slider */
-.slider {
+/* .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -191,7 +225,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(19px);
   -ms-transform: translateX(19px);
   transform: translateX(19px);
-}
+} */
 
 /**************************************************/
 /* SCREEN */
@@ -201,6 +235,7 @@ input:checked + .slider:before {
   flex-direction: column;
   align-items: center;
   align-content: center;
+  padding-top: 7rem;
   height: 70%;
 }
 
@@ -323,17 +358,6 @@ input:checked + .slider:before {
   background-color: #c96464;
 }
 
-@media screen and (min-width: 480px) {
-}
-
-@media screen and (min-width: 768px) {
-  .answers-container button {
-    padding: 0.5rem 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1200) {
-}
 
 /***********************************************/
 /*SCORE*/
@@ -421,7 +445,6 @@ input:checked + .slider:before {
     border-bottom: solid #c4c4c4 0.2px;
   }
 
-
   .console {
     margin-top: 5rem;
     margin-left: 15%;
@@ -432,6 +455,7 @@ input:checked + .slider:before {
   }
 
   .game-container {
+    padding-top: 3rem;
     width: 80%;
     height: 70%;
   }
@@ -517,50 +541,57 @@ input:checked + .slider:before {
     padding: 0;
   }
 
-.screen .timer-bar {
-  height: 5px;
-  width: 85%;
-  margin-left: 1rem;
-  margin-right: 1.5rem;
-
-}
-
-.timer-bar .progress {
-  height: 5px;
-}
-
-@keyframes progres {
-  100% {
-    width: 0%;
-  }
-  75% {
-    width: 21%;
-  }
-  50% {
-    width: 42%;
-  }
-  25% {
-    width: 63%;
-  }
-  0% {
+  .screen .timer-bar {
+    height: 5px;
     width: 85%;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+
+  .timer-bar .progress {
+    height: 5px;
+  }
+
+  @keyframes progres {
+    100% {
+      width: 0%;
+    }
+    75% {
+      width: 21%;
+    }
+    50% {
+      width: 42%;
+    }
+    25% {
+      width: 63%;
+    }
+    0% {
+      width: 85%;
+    }
+  }
+  .screen {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .screen .screen-score {
+    font-size: medium;
+    position: relative;
+    top: 0;
+    right: 2%;
+  }
+
+  .screen .container-timer {
+    display: flex;
+    justify-content: space-around;
+    margin: 1%;
   }
 }
-.screen{
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 0;
+
+@media screen and (min-width: 768px) {
+  .answers-container button {
+    padding: 0.5rem 1.5rem;
+  }
 }
 
-.screen .screen-score{
-  font-size: medium;
-  position: relative;
-  top: 0;
-  right: 2%;
-}
-
-.screen .container-timer{
-  display: flex;
-  justify-content: space-around;
-  margin: 1%;
-}
