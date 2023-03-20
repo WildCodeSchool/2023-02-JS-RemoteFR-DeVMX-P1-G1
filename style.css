@@ -235,6 +235,7 @@ input:checked + .slider:before {
   flex-direction: column;
   align-items: center;
   align-content: center;
+  padding-top: 7rem;
   height: 70%;
 }
 
@@ -357,17 +358,6 @@ input:checked + .slider:before {
   background-color: #c96464;
 }
 
-@media screen and (min-width: 480px) {
-}
-
-@media screen and (min-width: 768px) {
-  .answers-container button {
-    padding: 0.5rem 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1200) {
-}
 
 /***********************************************/
 /*SCORE*/
@@ -465,6 +455,7 @@ input:checked + .slider:before {
   }
 
   .game-container {
+    padding-top: 3rem;
     width: 80%;
     height: 70%;
   }
@@ -597,3 +588,10 @@ input:checked + .slider:before {
     margin: 1%;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .answers-container button {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
