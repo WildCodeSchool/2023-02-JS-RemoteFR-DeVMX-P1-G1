@@ -3,10 +3,7 @@ window.addEventListener("load", () => {
 
   const modalStartButton = document.querySelector(".modal-start-button");
 
-  console.log(modalStartButton);
-
   modalStartButton.addEventListener("click", () => {
     modal.classList.add("modal-hidden");
   });
-
 });
